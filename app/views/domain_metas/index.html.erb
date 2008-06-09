@@ -1,0 +1,26 @@
+<h1>Listing domain_metas</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Language</th>
+    <th>Domain</th>
+  </tr>
+
+<% for domain_meta in @domain_metas %>
+  <tr>
+    <td><%=h domain_meta.name %></td>
+    <td><%=h domain_meta.description %></td>
+    <td><%=h domain_meta.language %></td>
+    <td><%=h domain_meta.domain %></td>
+    <td><%= link_to 'Show', domain_meta %></td>
+    <td><%= link_to 'Edit', edit_domain_meta_path(domain_meta) %></td>
+    <td><%= link_to 'Destroy', domain_meta, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New domain_meta', new_domain_meta_path %>

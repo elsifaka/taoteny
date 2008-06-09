@@ -1,0 +1,22 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+malagasy:
+  name: "Malagasy"
+  code_ISO_639_1: "mg"
+  code_ISO_639_2: "mlg"
+  code_ISO_639_3: "mlg"
+  code_RFC_3066: "mg_MG"
+
+french:
+  name: "Français"
+  code_ISO_639_1: "fr"
+  code_ISO_639_2: "fre"
+  code_ISO_639_3: "fre"
+  code_RFC_3066: "fr_FR"
+  
+english:
+  name: "English"
+  code_ISO_639_1: "en"
+  code_ISO_639_2: "eng"
+  code_ISO_639_3: "eng"
+  code_RFC_3066: "en_EN"

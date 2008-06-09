@@ -1,0 +1,5 @@
+<p>
+  <%= f.label :language_id, "Langue" %>
+  <br/>
+  <%= f.collection_select(:language_id, Language.find(:all, :select => "name, id"), :id, :public_name) %>
+</p>

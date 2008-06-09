@@ -1,0 +1,32 @@
+<h1>Editing domain_meta</h1>
+
+<%= error_messages_for :domain_meta %>
+
+<% form_for(@domain_meta) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <b>Language</b><br />
+    <%= f.text_field :language %>
+  </p>
+
+  <p>
+    <b>Domain</b><br />
+    <%= f.text_field :domain %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @domain_meta %> |
+<%= link_to 'Back', domain_metas_path %>

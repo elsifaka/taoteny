@@ -1,0 +1,26 @@
+<h1>Domaines</h1>
+<div id="domains">
+  <dl>
+    <% @domains.each do |domain| %>
+      <div class="domain container">
+        <div class="side">
+          <div class="id">#<%= domain[:id] %></div>
+          <div class="actions">
+            <%= link_to 'Edit', edit_domain_path(domain) %><br /><%= link_to 'Destroy', domain, :confirm => 'Are you sure?', :method => :delete %>
+          </div>
+        </div>
+        <div class="main">
+          <dt>
+            <%= link_to(domain.name_fre, domain) %>
+          </dt>
+          <dd>
+            <%= domain.description_fre %>
+          </dd>
+        </div>
+        <br class="clear" />
+      </div>
+    <% end %>
+  </dl>
+</div>
+<br class="clear" />
+<%= link_to 'New domain', new_domain_path %>

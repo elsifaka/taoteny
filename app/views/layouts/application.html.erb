@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>VM - Mémoire de traduction Web 2.0</title>
+    <%= stylesheet_link_tag 'screen', :media => "screen" %>
+  </head>
+  <body>
+    <div id="page_wrapper">
+      <div id="header">
+        <h1>VM</h1>
+        <h2><%= content(:baseline) %></h2>
+      </div>
+      <div id="content">
+        <p style="color: green"><%= flash[:notice] %></p>
+        <%= debug cookies %>
+        <%= yield %>
+      </div>
+      <div id="footer">
+        <p><%= content(:footer_info) %></p>
+      </div>
+    </div>
+  </body>
+</html>

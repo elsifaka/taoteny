@@ -1,0 +1,9 @@
+.DS_Store
+.loadpath
+.project
+nbproject
+nbproject/**/*
+log/*.log
+tmp/**/*
+database.yml
+

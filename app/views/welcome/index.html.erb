@@ -1,0 +1,40 @@
+<h1><%= content(:welcome) %></h1>
+<% if cookies[:first_connection].nil? %>
+  <div id="choose_language">
+    <h2><%= content(:before_continuing) %></h2>
+    <% form_for :user_pref, :controller => "welcome", :action => "choose_languages" do |f| %>
+      <p>
+        <label for="interface_language_code"><%= content(:choose_interface_language_code) %></label>
+        <%= render :partial => "languages/collection_select", :locals => {:object => :user_pref, :usage => :interface_language_code} %>
+        <%= collection_select :user_pref, :interface_language_code, Language.find(:all, :select => "name, id"), :id, :name %>
+      </p>
+      <p>
+        <label for="source_language_code"><%= content(:choose_source_language_code) %></label>
+        <%= collection_select :user_pref, :source_language_code, Language.find(:all, :select => "name, id"), :id, :name %>
+      </p>
+      <p>
+        <label for="target_language_code"><%= content(:choose_target_language_code) %></label>
+        <%= collection_select :user_pref, :target_language_code, Language.find(:all, :select => "name, id"), :id, :name %>
+      </p>
+      <p>
+        <label>&nbsp;</label><%= f.submit(content(:continue)) %>
+      </p>
+    <% end %>
+  </div>
+<% else %>
+  <div id="search">
+    <form>
+      <div id="search_form">
+        <%= render :partial => "languages/collection_select", :locals => {:object => :search_form, :usage => :search_term_language_code} %>
+        <input type="text" name="search_term" id="search_term" value="<%= content(:search) %>" size="50"/><br />
+        <input type="submit" name="search_submit" id="search_submit" value="<%= content(:search) %>" />
+        <input type="submit" name="random_search_submit" id="random_search_submit" value="<%= content(:random_term) %>" />
+      </div>
+      <div id="search_actions" class="actions">
+        <%= link_to content(:preferences), "#" %><br />
+        <%= link_to content(:advanced_search), "#" %><br />
+      </div>
+    </form>
+  </div>
+<% end %>
+

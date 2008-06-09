@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @language.name %>
+</p>
+
+<p>
+  <b>Code iso 639 1:</b>
+  <%=h @language.code_ISO_639_1 %>
+</p>
+
+<p>
+  <b>Code iso 639 2:</b>
+  <%=h @language.code_ISO_639_2 %>
+</p>
+
+<p>
+  <b>Code iso 639 3:</b>
+  <%=h @language.code_ISO_639_3 %>
+</p>
+
+
+<%= link_to 'Edit', edit_language_path(@language) %> |
+<%= link_to 'Back', languages_path %>

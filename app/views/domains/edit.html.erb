@@ -1,0 +1,30 @@
+<h1>Editing domain</h1>
+
+<%= error_messages_for :domain %>
+
+<% form_for(@domain) do |f| %>
+<% @domain.domain_metas.each do |m| %>
+<% fields_for "domain[domain_metas_attributes][]", m do |m_fields| %>
+<fieldset>
+	<h2><%= m.language.public_name %></h2>
+<p>
+	<%= m_fields.label :name, "Nom" %><br />
+	<%= m_fields.text_field :name, :index => nil %>
+	</p>
+	<p>
+	<%= m_fields.label :description, "Description" %><br />
+	<%= m_fields.text_field :description, :index => nil %>
+	</p>
+	<%= m_fields.hidden_field :language_id, :value => m.language[:id], :index => nil %>
+	<%= m_fields.hidden_field :id, :value => m[:id], :index => nil %>
+</fieldset>
+<% end %>
+<% end %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @domain %> |
+<%= link_to 'Back', domains_path %>

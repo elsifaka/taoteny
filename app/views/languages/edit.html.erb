@@ -1,0 +1,32 @@
+<h1>Editing language</h1>
+
+<%= error_messages_for :language %>
+
+<% form_for(@language) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Code iso 639 1</b><br />
+    <%= f.text_field :code_ISO_639_1 %>
+  </p>
+
+  <p>
+    <b>Code iso 639 2</b><br />
+    <%= f.text_field :code_ISO_639_2 %>
+  </p>
+
+  <p>
+    <b>Code iso 639 3</b><br />
+    <%= f.text_field :code_ISO_639_3 %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @language %> |
+<%= link_to 'Back', languages_path %>

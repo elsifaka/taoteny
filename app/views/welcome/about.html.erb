@@ -1,0 +1,5 @@
+<div id="about">
+  <% content(:about).split("\n").each do |text| %>
+    <%= textilize(text) %>
+  <% end %>
+</div>
