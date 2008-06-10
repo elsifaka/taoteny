@@ -11,15 +11,14 @@
     <div id="page_wrapper">
       <div id="header">
         <h1>VM</h1>
-        <h2><%= content(:baseline) %></h2>
+        <h2><%= :baseline.l %></h2>
       </div>
       <div id="content">
         <p style="color: green"><%= flash[:notice] %></p>
-        <%= debug cookies %>
         <%= yield %>
       </div>
       <div id="footer">
-        <p><%= content(:footer_info) %></p>
+        <p><%= :footer_info.l %></p>
       </div>
     </div>
   </body>

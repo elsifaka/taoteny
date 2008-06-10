@@ -2,41 +2,108 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-  helper :all # include all helpers, all the time
-  before_filter :detect_language, :init_content
-  
+  helper :all # include all helpers, all the time  
+  around_filter :set_locale
+
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => 'fb4c0b67c9c14c01cddef94797b674bc'
   
   private
-  def init_content
-    @content = {}
-    @content[:baseline] = {}
-    @content[:baseline][:fre] = "Encore un Mémoire de Traductions Démocratique en ligne"
-    @content[:baseline][:eng] = "Yet Another Online Democratic Translation Memory"
-    @content[:baseline][:mlg] = "Taoteny - Mbola Firaketana Dikanteny azo andraisana anjara amin'ny Aterineto Ihany"
-    @content[:footer_info] = {}
-    @content[:footer_info][:fre] = '<a href="/welcome/about" title="Encore un Mémoire de Traductions Démocratique en ligne">VM</a> a été mis sur les <a href="http://rubyonrails.com" title="Développement Web sans Souffrances">Rails</a> dans le cadre du <a href="http://telomiova.org" title="Internet - Malagasy - Mivelatra">Projet Telomiova</a> par <a href="http://jojopil.com" title="Innovations">Jojopil</a>.'
-    @content[:footer_info][:eng] = '<a href="/welcome/about" title="Yet Another Online Democratic Translation Memory">VM</a> was dropped on <a href="http://rubyonrails.com" title="Web Development that doesn\'t hurt">Rails</a> for the <a href="http://telomiova.org" title="Internet - Malagasy - Mivelatra">Telomiova Project</a> by <a href="http://jojopil.com" title="Innovations">Jojopil</a>.'
-    @content[:footer_info][:mlg] = '<a href="/welcome/about" title="Mbola Firaketana Dikanteny azo andraisana anjara amin\'ny Aterineto Ihany">VM</a> dia nampetrak\'i <a href="http://jojopil.com" title="Mamaly Filàna">Jojopil</a> teo ambony <a href="http://rubyonrails.com" title="Web Development that doesn\'t hurt">Lalamby</a> tao anaty sehatra ny <a href="http://telomiova.org" title="Internet - Malagasy - Mivelatra">Tetikasa Telomiova</a>.'
+
+  # Set the locale from the parameters, the session, or the navigator
+  # If none of these works, the Globalite default locale is set (en-*)
+  def set_locale
+    # Get the current path and request method (useful in the layout for changing the language)
+    @current_path = request.env['PATH_INFO']
+    @request_method = request.env['REQUEST_METHOD']
+
+    # Try to get the locale from the session, and then from the navigator
+    if session[:locale]
+      logger.debug "[globalite] Loading locale: #{session[:locale]} from session"
+      Locale.code = session[:locale]
+    else
+      accept_header = get_sorted_locales_from_accept_header
+      logger.debug "[globalite] Application accepted locales: #{Globalite.ui_locales.values.to_sentence}"
+      my_loc = accept_header.detect {|l| is_matching_ui_locale?(l)}
+      if my_loc
+        logger.debug "[globalite] #{my_loc}"
+        Locale.code = my_loc
+      end
+    end
+    
+    logger.debug "[globalite] Locale set to #{Locale.code}"
+    session[:locale] = Locale.code
+    # render the page
+    yield
+
+    # reset the locale to its default value
+    Locale.reset!
+  end
+
+  # Get a sorted array of the navigator languages
+  def get_sorted_locales_from_accept_header
+    accept_langs = (request.env['HTTP_ACCEPT_LANGUAGE'] || "en-us,en;q=0.5").split(/,/) rescue nil
+    return nil unless accept_langs
+
+    # Extract langs and sort by weight
+    # Example HTTP_ACCEPT_LANGUAGE: "en-au,en-gb;q=0.8,en;q=0.5,ja;q=0.3"
+    wl = {}
+    accept_langs.each {|accept_lang|
+      if (accept_lang + ';q=1') =~ /^(.+?)-(.+?);q=([^;]+).*/
+        wl[($3.to_f rescue -1.0)]= $1+"-"+$2.upcase
+      elsif (accept_lang + ';q=1') =~ /^(.+?);q=([^;]+).*/
+        wl[($2.to_f rescue -1.0)]= $1+"-*"
+      end
+    }
+    sorted_langs = wl.sort{|a,b| b[0] <=> a[0] }.map{|a| a[1] }
+    logger.debug "[globalite] Client accepted locales: #{sorted_langs.to_sentence}"
+    sorted_langs = wl.sort{|a,b| b[0] <=> a[0] }.map{|a| a[1] }
+    sorted_langs
+  end
+
+  # Returns the UI locale that best matches with the parameter
+  # or nil if not found
+  def is_matching_ui_locale?(locale)
+    res = false
+    lang = locale[0,2].downcase
+    if locale[3,5]
+      country = locale[3,5].upcase
+      logger.debug "[globalite] Trying to match locale: #{lang}-#{country}"
+      locale_code = "#{lang}-#{country}".to_sym
+    end
+    #      logger.debug "[globalite] Trying to match #{lang}-*"
+    #      locale_code = "#{lang}-*".to_sym
+    #    end
+
+    # Check with exact matching or on the language only
+    res |= Globalite.ui_locales.values.include?(locale_code)
+    unless res
+      Globalite.ui_locales.values.each do |lang|
+        logger.debug "[globalite] Trying to match language only: #{lang} with #{locale}"
+        res |= /#{lang}/i =~ locale ? true : false
+      end
+    end
+    logger.debug "[globalite] Found #{res}"
+    res
   end
   
-  def detect_language
-    flash[:notice] ||= ""
-    cookies.delete :interface_language_code
-    if cookies[:interface_language_code].nil?
-      langs = request.env["HTTP_ACCEPT_LANGUAGE"].scan(/(?:[^-]|^)(\w\w)(?:$|[^-])/i)
-      langs.each do |l|
-        my_l = Language.find_by_code_ISO_639_1(l)
-        flash[:notice] << "# tryed #{l}<br />"
-        if my_l
-          cookies[:interface_language_code] = my_l.code_ISO_639_3
-          flash[:notice] << "# found that #{l} == #{my_l.code_ISO_639_3} so setted cookies[:interface_language_code] is #{cookies[:interface_language_code]}<br />"
-          redirect_to :controller => "welcome" unless cookies[:interface_language_code].nil?
-        end
-      end
-      flash[:notice] << "language is set to #{cookies[:interface_language_code]}<br />"
-    end
-  end
+  
+  #  private  
+  #  def detect_language
+  #    flash[:notice] ||= ""
+  #    cookies.delete :interface_language_code
+  #    if cookies[:interface_language_code].nil?
+  #      langs = request.env["HTTP_ACCEPT_LANGUAGE"].scan(/(?:[^-]|^)(\w\w)(?:$|[^-])/i)
+  #      langs.each do |l|
+  #        my_l = Language.find_by_code_ISO_639_1(l)
+  #        flash[:notice] << "# tryed #{l}<br />"
+  #        if my_l
+  #          cookies[:interface_language_code] = my_l.code_ISO_639_3
+  #          flash[:notice] << "# found that #{l} == #{my_l.code_ISO_639_3} so setted cookies[:interface_language_code] is #{cookies[:interface_language_code]}<br />"
+  #          redirect_to :controller => "welcome" unless cookies[:interface_language_code].nil?
+  #        end
+  #      end
+  #      flash[:notice] << "language is set to #{cookies[:interface_language_code]}<br />"
+  #    end
 end
