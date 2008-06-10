@@ -1,0 +1,25 @@
+locale_name: Malagasy
+
+baseline: "Taoteny - Mbola Firaketana Dikanteny azo andraisana anjara amin'ny Aterineto Ihany"
+footer_info: <a href="/welcome/about" title="Mbola Firaketana Dikanteny azo andraisana anjara amin'ny Aterineto Ihany">VM</a> dia nampetrak'i <a href="http://jojopil.com" title="Mamaly Filàna">Jojopil</a> teo ambony <a href="http://rubyonrails.com" title="Web Development that doesn\'t hurt">Lalamby</a> tao anaty sehatra ny <a href="http://telomiova.org" title="Internet - Malagasy - Mivelatra">Tetikasa Telomiova</a>.
+welcome: "Tongasoa eto amin'ny VM"
+before_continuing: "Alohan'ny irosoana amin'ny lalindalina kokoa"
+choose_interface_language_code: "Fifidianana ny fiteny ampiasana ny vohikala : "
+choose_source_language_code: "Fifidianana ny fiteny iaingana : "
+choose_target_language_code: "Fifidianana ny fiteny tanjona : "
+continue: "Andao ary !"
+search: "Hikaroka"
+random_term: "Omeo patiny :-)"
+preferences: "Aratsafidy"
+advanced_search: "Fikarohana Mitsongo"
+about: "
+h2. Mombamomba
+
+VM dia vohikala natao itoeran'ny dikan-teny vaovao rehetra. Araka ny fombafomba web 2.0 dia afaka mandray anjara daholo ny olona rehetra, manome sosokevitra, mifidy izay vaombolana vaovao metimety amin'ny filàny.
+
+Ny faniriana moa dia ny hampiasan'ny olona rehetra ity fitaovana ity ka tsy handaniana fotoana hamoronana voambolana vahiny efa nisy nanandrana nandika.
+
+Izay angamba aloha no azo ambara, raha misy fanontaniana dia aza misalasala manoratra.
+
+Mazotoa mandika teny e !
+    "

@@ -1,0 +1,22 @@
+locale_name: English
+baseline: "Yet Another Online Democratic Translation Memory"
+footer_info: <a href="/welcome/about" title="Yet Another Online Democratic Translation Memory">VM</a> was dropped on <a href="http://rubyonrails.com" title="Web Development that doesn\'t hurt">Rails</a> for the <a href="http://telomiova.org" title="Internet - Malagasy - Mivelatra">Telomiova Project</a> by <a href="http://jojopil.com" title="Innovations">Jojopil</a>.
+welcome: "Welcome on VM"
+before_continuing: "Before continuing"
+choose_interface_language_code: "Choose your interface language : "
+choose_source_language_code: "Choose your source language : "
+choose_target_language_code: "Choose your target language : "
+continue: "Let's go !"
+search: "Search"
+random_term: "Random term"
+preferences: "Preferences"
+advanced_search: "Advanced Search"
+about: "
+h2. About
+
+VM is a _translation memory_. Cet outil a été créé pour centraliser tous les essais de traductions de termes inexistants dans la langue malgache.
+
+Nous espérons que grâce à cet outil, toutes les personnes travaillant dans les domaines où le vocabulaire spécialisé manque, pourront dorénavant partager leurs essais de traductions et pourront profiter des recherches faites par d'autres personnes.
+
+Bon Surf !
+    "
