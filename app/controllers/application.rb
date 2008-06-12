@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time  
   around_filter :set_locale
+  include AuthenticatedSystem
 
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
@@ -33,7 +34,6 @@ class ApplicationController < ActionController::Base
     end
     
     logger.debug "[globalite] Locale set to #{Locale.code}"
-    session[:locale] = Locale.code
     # render the page
     yield
 
@@ -72,19 +72,15 @@ class ApplicationController < ActionController::Base
       logger.debug "[globalite] Trying to match locale: #{lang}-#{country}"
       locale_code = "#{lang}-#{country}".to_sym
     end
-    #      logger.debug "[globalite] Trying to match #{lang}-*"
-    #      locale_code = "#{lang}-*".to_sym
-    #    end
 
     # Check with exact matching or on the language only
     res |= Globalite.ui_locales.values.include?(locale_code)
     unless res
-      Globalite.ui_locales.values.each do |lang|
-        logger.debug "[globalite] Trying to match language only: #{lang} with #{locale}"
-        res |= /#{lang}/i =~ locale ? true : false
+      Globalite.ui_locales.values.each do |ui|
+        logger.debug "[globalite] Trying to match language only: #{ui} with #{locale}"
+        res |= /#{ui}/i =~ locale ? true : false
       end
     end
-    logger.debug "[globalite] Found #{res}"
     res
   end
   

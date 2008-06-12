@@ -10,8 +10,8 @@ choose_target_language_code: "Fifidianana ny fiteny tanjona : "
 continue: "Andao ary !"
 search: "Hikaroka"
 random_term: "Omeo patiny :-)"
-preferences: "Aratsafidy"
-advanced_search: "Fikarohana Mitsongo"
+preferences: "Safidy"
+advanced_search: "Fikarohana misy pitsopitsony"
 about: "
 h2. Mombamomba
 
@@ -23,3 +23,9 @@ Izay angamba aloha no azo ambara, raha misy fanontaniana dia aza misalasala mano
 
 Mazotoa mandika teny e !
     "
+login: Solonanarana
+screen_name: Anarana aseho
+email: Imailaka
+password: Teny Miafina
+confirm_password: Fanantitranterana ny Teny Miafina
+sign_up: Hisoratra

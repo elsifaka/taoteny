@@ -1,0 +1,33 @@
+<%= error_messages_for :user %>
+<% form_for @user do |f| -%>
+
+  <p><label for="email"><%= :email.l("Email") %></label><br/>
+  <%= f.text_field :email %></p>
+
+  <fieldset>
+    <legend><%= :change_password.l("Change password") %></legend>
+    <p><label for="password"><%= :password.l("Password") %></label><br/>
+    <%= f.password_field :password %></p>
+  
+    <p><label for="password_confirmation"><%= :confirm_password.l("Confirm Password") %></label><br/>
+    <%= f.password_field :password_confirmation %></p>
+  </fieldset>
+
+  <fieldset>
+    <legend><%= :languages_preferences.l("Languages preferences") %></legend>
+    <p>
+      <label for="interface_language_code"><%= :choose_interface_language_code.l %></label>
+      <%= f.collection_select :ui_language, Language.find(:all, :select => "name, code_ISO_639_1"), :code_ISO_639_1, :name %>
+    </p>
+    <p>
+      <label for="source_language_code"><%= :choose_source_language_code.l %></label>
+      <%= f.collection_select :src_language, Language.find(:all, :select => "name, code_ISO_639_1"), :code_ISO_639_1, :name %>
+    </p>
+    <p>
+      <label for="target_language_code"><%= :choose_target_language_code.l %></label>
+      <%= f.collection_select :tgt_language, Language.find(:all, :select => "name, code_ISO_639_1"), :code_ISO_639_1, :name %>
+    </p>
+  </fieldset>
+
+  <p><%= submit_tag :update.l("Update") %></p>
+<% end -%>

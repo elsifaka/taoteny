@@ -1,27 +1,13 @@
-<h1>Editing category</h1>
+<h1><%= :edit_category.l("Editing category") %></h1>
 
 <%= error_messages_for :category %>
 
 <% form_for(@category) do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
   <p>
-    <b>Name</b><br />
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <b>Description</b><br />
-    <%= f.text_field :description %>
-  </p>
-
-  <p>
-    <b>Language</b><br />
-    <%= f.text_field :language %>
-  </p>
-
-  <p>
-    <%= f.submit "Update" %>
+    <%= f.submit :update.l("Update") %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @category %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to :show.l("Show"), @category %> |
+<%= link_to :back.l("Back"), categories_path %>

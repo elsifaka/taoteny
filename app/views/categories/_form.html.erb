@@ -1,0 +1,14 @@
+<p>
+  <b><%= f.label :name, :name.l("Name") %></b><br />
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <b><%= f.label :description, :description.l("Description") %></b><br />
+  <%= f.text_field :description %>
+</p>
+
+<p>
+  <b><%= f.label :language_id, :language.l("Language") %></b><br />
+  <%= f.collection_select :language_id, Language.find(:all, :select => "name, id"), :id, :name %>
+</p>

@@ -22,3 +22,9 @@ Nous espérons que grâce à cet outil, toutes les personnes travaillant dans le
 
 Bon Surf !
     "
+login: Identifiant
+screen_name: Nom Affiché
+email: Email
+password: Mot de Passe
+confirm_password: Confirmation du Mot de Passe
+sign_up: S'inscrire

@@ -11,7 +11,7 @@
   <tr>
     <td><%=h category.name %></td>
     <td><%=h category.description %></td>
-    <td><%=h category.language %></td>
+    <td><%=h category.language.name %></td>
     <td><%= link_to 'Show', category %></td>
     <td><%= link_to 'Edit', edit_category_path(category) %></td>
     <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>

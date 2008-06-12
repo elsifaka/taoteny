@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :entries
+  map.resources :users
 
-  map.root :controller => "Welcome"
+  map.resource :session
 
   map.resources :domain_metas
 
@@ -12,6 +12,15 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :languages
 
   map.resources :entries
+
+  map.root :controller => "Welcome"
+
+  #map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
+  map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate', :activation_code => nil
+  map.signup '/signup', :controller => 'users', :action => 'new'
+  map.login '/login', :controller => 'sessions', :action => 'new'
+  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
 

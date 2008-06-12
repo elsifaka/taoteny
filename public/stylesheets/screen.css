@@ -1,98 +1,115 @@
-body { background-color: #AAA; color: #white; padding: 0px; margin: 0px;}
+body { background-color: white; color: #003882; padding: 0px; margin: 0px;}
+
+body * {
+    background-color: white; color: #003882;
+}
 
 #page_wrapper {
     
 }
 
 #content {
-    border-top: .3em solid #EEE;
-    border-bottom: .3em solid #EEE;
+    /*
+    border-top: .3em solid #BCCBDE;
+    border-bottom: .3em solid #BCCBDE;
+    */
     background-color: white;
-    color: #333;
+    color: #003882;
     margin: 0px;
     padding: 1em;
 }
 
 #header {
-    border-bottom: 1em solid #DDD;
+    /*border-bottom: 1em solid #809CC1;*/
+    border-bottom: 1px dotted #809CC1;
     padding: 0 2em 0 2em;
+}
+
+#header h1 a {
+    text-decoration: none;
+    border: none;
+}
+
+#baseline {
+    margin-left: 1.3em;
+    font-size: smaller;
+    margin-top: -1.8em;
 }
 
 #footer {
-    border-top: 1em solid #DDD;
-    padding: 0 2em 0 2em;
+    text-align: center;
 }
 
 body, p, ol, ul, td {
-  font-family: Garamond, Georgia,'Times New Roman',times,serif;
-  font-size:   13px;
-  line-height: 18px;
+    font-family: Garamond, Georgia,'Times New Roman',times,serif;
+    font-size:   20px;
+    line-height: 22px;
 }
 
 pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+    background-color: #eee;
+    padding: 10px;
+    font-size: 11px;
 }
 
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+a { color: #809CC1; border-bottom: 1px dotted #809CC1; text-decoration: none; }
+a:visited { color: #809CC1; border-bottom: 1px dotted #BCCBDE; text-decoration: none; }
+a:hover { border-bottom: 1px dotted #003882; }
 
 .fieldWithErrors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+    padding: 2px;
+    background-color: red;
+    display: table;
 }
 
 #errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+    width: 400px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
 }
 
 #errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: #c00;
+    color: #fff;
 }
 
 #errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
+    color: #333;
+    margin-bottom: 0;
+    padding: 5px;
 }
 
 #errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
+    font-size: 12px;
+    list-style: square;
 }
 
 div.uploadStatus {
-  margin: 5px;
+    margin: 5px;
 }
 
 div.progressBar {
-  margin: 5px;
+    margin: 5px;
 }
 
 div.progressBar div.border {
-  background-color: #fff;
-  border: 1px solid gray;
-  width: 100%;
+    background-color: #fff;
+    border: 1px solid gray;
+    width: 100%;
 }
 
 div.progressBar div.background {
-  background-color: #333;
-  height: 18px;
-  width: 0%;
+    background-color: #333;
+    height: 18px;
+    width: 0%;
 }
 
 .clear {
@@ -113,6 +130,76 @@ div.side {
     padding: .5em;
 }
 
-#search form {
+form {
     text-align: center;
+}
+
+input {
+    border: 1px dotted #809CC1;
+}
+
+input[type="submit"] {
+    background-color: #BCCBDE;
+    font-weight: bold;
+}
+
+
+input[type="submit"]:active {
+    color: white;
+    background-color: #BCCBDE;
+}
+
+input[type="submit"]:hover {
+    color: white;
+    background-color: #809CC1;
+}
+
+#search_form {
+}
+
+#search_actions {
+}
+
+#login_form {
+    text-align: center;
+}
+
+.flash {
+    border: 2px solid black;
+    padding: 1em;
+}
+
+.error {
+    color: red;
+    border-color: red;
+    background-color: pink;
+}
+
+.notice {
+    color: orange;
+    border-color: orange;
+    background-color: yellow;
+}
+
+#session {
+  position: absolute;
+  
+  top: 3px;
+  right: 1em;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.actions {
+    font-size: medium;
 }

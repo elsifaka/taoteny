@@ -20,3 +20,12 @@ Nous espérons que grâce à cet outil, toutes les personnes travaillant dans le
 
 Bon Surf !
     "
+login: Login
+email: Email
+password: Password
+confirm_password: Confirm Password
+sign_up: Sign Up
+log_in: Log in
+log_out: Log out
+logged_in_as: You are logged in as
+not_logged_in: You are not logged in

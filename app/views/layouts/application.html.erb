@@ -1,24 +1,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="<%= Locale.code.to_s[0..1] %>">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title>VM - Mémoire de traduction Web 2.0</title>
+    <title>VM - <%= :baseline.l("taoteny") %></title>
     <%= stylesheet_link_tag 'screen', :media => "screen" %>
   </head>
   <body>
     <div id="page_wrapper">
       <div id="header">
-        <h1>VM</h1>
-        <h2><%= :baseline.l %></h2>
+        <h1><a href="/" title="VM">VM</a></h1>
+        <h2 id="baseline"><%= :baseline.l %></h2>
+        <div id="session" class="actions">
+          <% if logged_in? %>
+            <%= :logged_in_as.l("You are logged in as") %>
+            <strong><%= link_to current_user.login, current_user %></strong>
+            | <%= link_to :log_out, logout_path %>
+          <% else %>
+            <%= :not_logged_in.l("You are not logged in") %> | <%= link_to :log_in.l("log in"), login_path %> | <%= link_to :sign_up.l("sign up"), signup_path %>
+          <% end %>
+        </div>
+        <br class="clear" />
       </div>
       <div id="content">
-        <p style="color: green"><%= flash[:notice] %></p>
+        <% unless flash[:notice].blank? %><p class="flash notice"><%= flash[:notice] %></p><% end %>
+        <% unless flash[:error].blank? %><p class="flash error"><%= flash[:error] %></p><% end %>
         <%= yield %>
       </div>
       <div id="footer">
-        <p><%= :footer_info.l %></p>
+        <p class="actions"><%= :footer_info.l %></p>
       </div>
     </div>
   </body>
