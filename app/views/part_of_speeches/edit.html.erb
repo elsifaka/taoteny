@@ -1,0 +1,24 @@
+<h1>Editing part_of_speech</h1>
+
+<% form_for(@part_of_speech) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :language %><br />
+    <%= f.text_field :language %>
+  </p>
+  <p>
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @part_of_speech %> |
+<%= link_to 'Back', part_of_speeches_path %>

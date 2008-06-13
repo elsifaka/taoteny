@@ -9,27 +9,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080611100631) do
+ActiveRecord::Schema.define(:version => 20080613191143) do
 
-  create_table "categories", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.integer  "language_id", :limit => 11
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "domain_metas", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
+  create_table "definitions", :force => true do |t|
+    t.integer  "parent_id",   :limit => 11
     t.integer  "language_id", :limit => 11
     t.integer  "domain_id",   :limit => 11
+    t.text     "content"
+    t.integer  "order",       :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "domains", :force => true do |t|
-    t.integer  "parent_id",  :limit => 11
+    t.integer  "parent_id",   :limit => 11
+    t.string   "name"
+    t.string   "description"
+    t.integer  "language_id", :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -51,6 +47,14 @@ ActiveRecord::Schema.define(:version => 20080611100631) do
     t.datetime "updated_at"
   end
 
+  create_table "part_of_speeches", :force => true do |t|
+    t.integer  "language_id", :limit => 11
+    t.string   "value"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "login"
     t.string   "email"
@@ -62,9 +66,9 @@ ActiveRecord::Schema.define(:version => 20080611100631) do
     t.datetime "remember_token_expires_at"
     t.string   "activation_code",           :limit => 40
     t.datetime "activated_at"
-    t.string   "ui_lang",                   :limit => 5
-    t.string   "src_lang",                  :limit => 5
-    t.string   "tgt_lang",                  :limit => 5
+    t.string   "ui_lang",                   :limit => 7
+    t.integer  "src_lang",                  :limit => 11
+    t.integer  "tgt_lang",                  :limit => 11
   end
 
 end

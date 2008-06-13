@@ -1,13 +1,15 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  description: MyString
+  parent: 
   language: 
   domain: 
+  content: MyText
+  order: 1
 
 two:
-  name: MyString
-  description: MyString
+  parent: 
   language: 
   domain: 
+  content: MyText
+  order: 1

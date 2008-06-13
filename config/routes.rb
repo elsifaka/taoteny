@@ -1,13 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :part_of_speeches
+
+  map.resources :definitions
+
   map.resources :users
 
   map.resource :session
 
-  map.resources :domain_metas
-
   map.resources :domains
-
-  map.resources :categories
 
   map.resources :languages
 

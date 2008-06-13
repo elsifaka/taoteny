@@ -10,8 +10,13 @@ class Language < ActiveRecord::Base
     name.titleize
   end
   
+  def globalite_locale
+    code_RFC_3066.gsub('_', '-')
+  end
+  
+  # used to validate malagasy content
   def validates_format_of(content)
-    /\b(?:(?:(?:ai|ae|ao|a|à|ei|eo|e|ia|iai|ie|io|i|oai|oa|oe|oi|o|ò|-)?(?:(?:b|dr|d|f|g|h|j|k|l|mb|mp|m|ndr|ntr|nts|nd|nj|ng|nk|nt|n|p|r|s|tr|ts|t|v|z)(?:'?(?:ai|ae|ao|a|à|ei|eo|e|ia|iai|ie|io|i|oai|oa|oe|oi|o|ò)|-))*(?:b|dr|d|f|g|h|j|k|l|mb|mp|m|ndr|ntr|nts|nd|nj|ng|nk|nt|(?:\w+)n'n|n|p|r|s|tr|ts|t|v|z)(?:ao|ae|a-|a|à|eo|e|i-|ia|ie|io|oay|oa|oe|o-|o|ò|oy|iay|ey|ay|y))|ah|an|ar|eh|e|i|oh|ô|ao|eo|e|ia|ie|io)\b/
+    /\b(?:(?:(?:ai|ae|ao|a|à|ei|eo|e|ia|iai|ie|io|i|oai|oa|oe|oi|o|ò|-)?(?:(?:b|dr|d|f|g|h|j|k|l|mb|mp|m|ndr|ntr|nts|nd|nj|ng|nk|nt|n|p|r|s|tr|ts|t|v|z)(?:'?(?:ai|ae|ao|a|à|ei|eo|e|ia|iai|ie|io|i|oai|oa|oe|oi|o|ò)|-))*(?:b|dr|d|f|g|h|j|k|l|mb|mp|m|ndr|ntr|nts|nd|nj|ng|nk|nt|(?:\w+)n'n|n|p|r|s|tr|ts|t|v|z)(?:ao|ae|a-|a|à|eo|e|i-|ia|ie|io|oay|oa|oe|o-|o|ò|oy|iay|ey|ay|y))|ah|an|ar|eh|e|i|oh|ô|ao|eo|e|ia|ie|io)\b/i =~ content
   end
   
 end

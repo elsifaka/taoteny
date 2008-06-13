@@ -1,0 +1,28 @@
+<h1>Listing definitions</h1>
+
+<table>
+  <tr>
+    <th>Parent</th>
+    <th>Language</th>
+    <th>Domain</th>
+    <th>Content</th>
+    <th>Order</th>
+  </tr>
+
+<% for definition in @definitions %>
+  <tr>
+    <td><%=h definition.parent %></td>
+    <td><%=h definition.language %></td>
+    <td><%=h definition.domain %></td>
+    <td><%=h definition.content %></td>
+    <td><%=h definition.order %></td>
+    <td><%= link_to 'Show', definition %></td>
+    <td><%= link_to 'Edit', edit_definition_path(definition) %></td>
+    <td><%= link_to 'Destroy', definition, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New definition', new_definition_path %>

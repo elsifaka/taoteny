@@ -20,9 +20,9 @@ class ApplicationController < ActionController::Base
     @request_method = request.env['REQUEST_METHOD']
 
     # Try to get the locale from the session, and then from the navigator
-    if session[:locale]
-      logger.debug "[globalite] Loading locale: #{session[:locale]} from session"
-      Locale.code = session[:locale]
+    if !current_user.nil? and current_user.ui_lang
+      logger.debug "[globalite] Loading locale: #{current_user.ui_lang} from session"
+      Locale.code = current_user.ui_lang
     else
       accept_header = get_sorted_locales_from_accept_header
       logger.debug "[globalite] Application accepted locales: #{Globalite.ui_locales.values.to_sentence}"

@@ -14,7 +14,7 @@
         <div id="session" class="actions">
           <% if logged_in? %>
             <%= :logged_in_as.l("You are logged in as") %>
-            <strong><%= link_to current_user.login, current_user %></strong>
+            <strong><%= link_to current_user.login, current_user %></strong> (<%= link_to :preferences.l("Preferences"), edit_user_path(current_user) %>)
             | <%= link_to :log_out, logout_path %>
           <% else %>
             <%= :not_logged_in.l("You are not logged in") %> | <%= link_to :log_in.l("log in"), login_path %> | <%= link_to :sign_up.l("sign up"), signup_path %>

@@ -1,18 +1,18 @@
-<% if false %>
+<% if current_user and (current_user.ui_lang.blank? or current_user.src_lang.blank? or current_user.tgt_lang.blank?) %>
   <div id="choose_language">
     <h2><%= :before_continuing.l %></h2>
-    <% form_for :user_pref, :controller => "welcome", :action => "choose_languages" do |f| %>
+    <% form_for current_user do |f| %>
       <p>
         <label for="interface_language_code"><%= :choose_interface_language_code.l %></label>
-        <%= collection_select :user_pref, :interface_language_code, Language.find(:all, :select => "name, id"), :id, :name %>
+        <%= collection_select :user, :ui_lang, Language.find(:all, :select => "name, code_RFC_3066"), :globalite_locale, :name %>
       </p>
       <p>
         <label for="source_language_code"><%= :choose_source_language_code.l %></label>
-        <%= collection_select :user_pref, :source_language_code, Language.find(:all, :select => "name, id"), :id, :name %>
+        <%= collection_select :user, :src_lang, Language.find(:all, :select => "name, id"), :id, :name %>
       </p>
       <p>
         <label for="target_language_code"><%= :choose_target_language_code.l %></label>
-        <%= collection_select :user_pref, :target_language_code, Language.find(:all, :select => "name, id"), :id, :name %>
+        <%= collection_select :user, :tgt_lang, Language.find(:all, :select => "name, id"), :id, :name %>
       </p>
       <p>
         <label>&nbsp;</label><%= f.submit(:continue.l) %>

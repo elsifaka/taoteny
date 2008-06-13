@@ -1,3 +1,9 @@
 <% div_for @user do %>
-<%= @user.login %>
+<dl>
+  <dt><%= :login.l("Login") %></dt><dd><%= @user.login %></dd>
+  <dt><%= :email.l("Email") %></dt><dd><%= @user.email %></dd>
+  <dt><%= :ui_lang.l("User Interface Language") %></dt><dd><%= @user.ui_lang %></dd>
+  <dt><%= :src_lang.l("Source Language") %></dt><dd><%= @user.src_lang %></dd>
+  <dt><%= :tgt_lang.l("Target Language") %></dt><dd><%= @user.tgt_lang %></dd>
+</dl>
 <% end %>

@@ -1,9 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  language: 
+  value: MyString
   description: MyString
 
 two:
-  name: MyString
+  language: 
+  value: MyString
   description: MyString

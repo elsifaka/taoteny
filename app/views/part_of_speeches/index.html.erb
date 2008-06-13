@@ -1,0 +1,24 @@
+<h1>Listing part_of_speeches</h1>
+
+<table>
+  <tr>
+    <th>Language</th>
+    <th>Value</th>
+    <th>Description</th>
+  </tr>
+
+<% for part_of_speech in @part_of_speeches %>
+  <tr>
+    <td><%=h part_of_speech.language %></td>
+    <td><%=h part_of_speech.value %></td>
+    <td><%=h part_of_speech.description %></td>
+    <td><%= link_to 'Show', part_of_speech %></td>
+    <td><%= link_to 'Edit', edit_part_of_speech_path(part_of_speech) %></td>
+    <td><%= link_to 'Destroy', part_of_speech, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New part_of_speech', new_part_of_speech_path %>

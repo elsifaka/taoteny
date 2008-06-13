@@ -15,7 +15,8 @@ class User < ActiveRecord::Base
   before_create :make_activation_code 
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :password, :password_confirmation
+  attr_accessible :login, :email, :password, :password_confirmation, :ui_lang, :src_lang, :tgt_lang
+  validate :src_and_tgt, :message => :should_be_different.l("Source language and Target language should be different.")
 
   # Activates the user in the database.
   def activate
@@ -99,6 +100,11 @@ class User < ActiveRecord::Base
     def make_activation_code
 
       self.activation_code = Digest::SHA1.hexdigest( Time.now.to_s.split(//).sort_by {rand}.join )
+    end
+    
+    private
+    def src_and_tgt
+      src_lang != tgt_lang
     end
     
 end

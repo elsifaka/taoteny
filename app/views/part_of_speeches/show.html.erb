@@ -1,0 +1,18 @@
+<p>
+  <b>Language:</b>
+  <%=h @part_of_speech.language %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%=h @part_of_speech.value %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @part_of_speech.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_part_of_speech_path(@part_of_speech) %> |
+<%= link_to 'Back', part_of_speeches_path %>

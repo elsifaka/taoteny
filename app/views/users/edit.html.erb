@@ -17,15 +17,15 @@
     <legend><%= :languages_preferences.l("Languages preferences") %></legend>
     <p>
       <label for="interface_language_code"><%= :choose_interface_language_code.l %></label>
-      <%= f.collection_select :ui_language, Language.find(:all, :select => "name, code_ISO_639_1"), :code_ISO_639_1, :name %>
+      <%= f.collection_select :ui_lang, Language.find(:all), :globalite_locale, :name %>
     </p>
     <p>
       <label for="source_language_code"><%= :choose_source_language_code.l %></label>
-      <%= f.collection_select :src_language, Language.find(:all, :select => "name, code_ISO_639_1"), :code_ISO_639_1, :name %>
+      <%= f.collection_select :src_lang, Language.find(:all), :code_ISO_639_1, :name %>
     </p>
     <p>
       <label for="target_language_code"><%= :choose_target_language_code.l %></label>
-      <%= f.collection_select :tgt_language, Language.find(:all, :select => "name, code_ISO_639_1"), :code_ISO_639_1, :name %>
+      <%= f.collection_select :tgt_lang, Language.find(:all), :code_ISO_639_1, :name %>
     </p>
   </fieldset>
 
