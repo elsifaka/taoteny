@@ -1,31 +1,27 @@
-<h1>New definition</h1>
+<h1><%= :new_definition.l("New Definition") %></h1>
 
 <% form_for(@definition) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :parent %><br />
-    <%= f.text_field :parent %>
+    <%= f.label :language, :language.l("Language") %><br />
+    <%= language_select(:definition, :language) %>
   </p>
   <p>
-    <%= f.label :language %><br />
-    <%= f.text_field :language %>
-  </p>
-  <p>
-    <%= f.label :domain %><br />
+    <%= f.label :domain, :domain.l("Domain") %><br />
     <%= f.text_field :domain %>
   </p>
   <p>
-    <%= f.label :content %><br />
+    <%= f.label :content, :content.l("Content") %><br />
     <%= f.text_area :content %>
   </p>
   <p>
-    <%= f.label :order %><br />
+    <%= f.label :order, :order.l("Order") %><br />
     <%= f.text_field :order %>
   </p>
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit :create.l("Create") %>
   </p>
 <% end %>
 
-<%= link_to 'Back', definitions_path %>
+<%= link_to :back.l('Back'), definitions_path %>

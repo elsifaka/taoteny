@@ -1,5 +1,4 @@
 class Definition < ActiveRecord::Base
   belongs_to :language
-  belongs_to :entry
-  acts_as_tree
+  belongs_to :domain
 end

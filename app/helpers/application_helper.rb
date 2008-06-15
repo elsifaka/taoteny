@@ -1,6 +1,6 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
-  def content(key, language = :"#{cookies[:interface_language_code]||"mlg"}")
-    @content[key][language]
+  def language_select(user, usage)
+    render :partial => "languages/collection_select", :locals => { :object => user, :usage => usage }
   end
 end

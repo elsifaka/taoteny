@@ -1,0 +1,43 @@
+--- 
+continue: 
+new: New
+sign_up: sign up
+name: 
+back: Back
+search: 
+tgt_lang: Target Language
+part_of_speech: Part of speech
+new_entry: New Entry
+choose_source_language_code: 
+languages_preferences: Languages preferences
+preferences: Preferences
+code_ISO_639_1: 
+language: Language
+choose_target_language_code: 
+order: Order
+before_continuing: 
+confirm_password: Confirm Password
+log_in: log in
+not_logged_in: You are not logged in
+listing_languages: Listing languages
+domain: Domain
+advanced_search: 
+baseline: taoteny
+about: 
+description: Description
+value: Value
+create: Create
+ui_lang: User Interface Language
+footer_info: 
+content: Content
+new_definition: New Definition
+random_term: 
+logged_in_as: You are logged in as
+src_lang: Source Language
+update: Update
+password: Password
+login: Login
+choose_interface_language_code: 
+change_password: Change password
+email: Email
+remember_me: Remember me

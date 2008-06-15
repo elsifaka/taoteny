@@ -1,1 +1,1 @@
-<%= collection_select object, usage, Language.find(:all, :select => "name, code_ISO_639_3"), :code_ISO_639_3, :name %>
+<%= collection_select object, usage, Language.find(:all, :select => "name, id"), :id, :name %>

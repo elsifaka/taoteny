@@ -4,12 +4,12 @@
 
 <% form_for(@entry) do |f| %>
   <p>
-    <b>Language</b><br />
-    <%= f.text_field :language %>
+    <b><%= :language.l("Language") %></b><br />
+    <%= language_select :entry, :language %>
   </p>
 
   <p>
-    <b>Value</b><br />
+    <b><%= :value.l("Value") %></b><br />
     <%= f.text_field :value %>
   </p>
 

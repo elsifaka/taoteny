@@ -1,7 +1,7 @@
 class CreateDefinitions < ActiveRecord::Migration
   def self.up
     create_table :definitions do |t|
-      t.references :parent
+      t.string :concept_hash # used to identify the same definition in many languages
       t.references :language
       t.references :domain
       t.text :content

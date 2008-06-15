@@ -9,23 +9,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080613191143) do
+ActiveRecord::Schema.define(:version => 20080613195728) do
+
+  create_table "attributions", :force => true do |t|
+    t.integer  "part_of_speech_id", :limit => 11
+    t.integer  "definition_id",     :limit => 11
+    t.integer  "entry_id",          :limit => 11
+    t.integer  "order",             :limit => 11
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "definitions", :force => true do |t|
-    t.integer  "parent_id",   :limit => 11
-    t.integer  "language_id", :limit => 11
-    t.integer  "domain_id",   :limit => 11
+    t.string   "concept_hash"
+    t.integer  "language_id",  :limit => 11
+    t.integer  "domain_id",    :limit => 11
     t.text     "content"
-    t.integer  "order",       :limit => 11
+    t.integer  "order",        :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "domains", :force => true do |t|
-    t.integer  "parent_id",   :limit => 11
+    t.string   "concept_hash"
     t.string   "name"
     t.string   "description"
-    t.integer  "language_id", :limit => 11
+    t.integer  "language_id",  :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
