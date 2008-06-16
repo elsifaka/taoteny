@@ -1,17 +1,31 @@
 locale_name: Malagasy
-
-baseline: "Taoteny - Mbola Firaketana Dikanteny azo andraisana anjara amin'ny Aterineto Ihany"
-footer_info: <a href="/welcome/about" title="Mbola Firaketana Dikanteny azo andraisana anjara amin'ny Aterineto Ihany">VM</a> dia nampetrak'i <a href="http://jojopil.com" title="Mamaly Filàna">Jojopil</a> teo ambony <a href="http://rubyonrails.com" title="Web Development that doesn\'t hurt">Lalamby</a> tao anaty sehatra ny <a href="http://telomiova.org" title="Internet - Malagasy - Mivelatra">Tetikasa Telomiova</a>.
-welcome: "Tongasoa eto amin'ny VM"
-before_continuing: "Alohan'ny irosoana amin'ny lalindalina kokoa"
-choose_interface_language_code: "Fifidianana ny fiteny ampiasana ny vohikala : "
-choose_source_language_code: "Fifidianana ny fiteny iaingana : "
-choose_target_language_code: "Fifidianana ny fiteny tanjona : "
-continue: "Andao ary !"
-search: "Hikaroka"
-random_term: "Omeo patiny :-)"
-preferences: "Safidy"
-advanced_search: "Fikarohana misy pitsopitsony"
+continue: Andao ary
+new: Vaovao
+sign_up: Hisoratra anarana
+name: Anarana
+back: Hiverina
+search: Hikaroka
+tgt_lang: Fiteny tanjona
+part_of_speech: Karazanteny
+new_entry: Voambolana vaovao
+choose_source_language_code: Fidio ny famantarana ny fiteny
+languages_preferences: Safidy momba ny fiteny
+preferences: Safidy
+code_ISO_639_1: famantarana ISO 639-1
+language: Fiteny
+login_success: Tafandroso soa aman-tsara ianao
+choose_target_language_code: Fidio ny fiteny tanjona
+order: Filaharana
+before_continuing: Alohan'ny hirosoana amin'ny lalindalina
+confirm_password: Antitrantero ny teny miafina
+log_in: Handroso
+not_logged_in: Mbola any ivelany ianao
+listing_languages: Lisitry ny fiteny
+domain: Sokajim-pahalalana
+signup_complete: Tafasoratra anarana soamantsara ianao
+advanced_search: Fikarohana amin'ny antsipirihany
+baseline: Taoteny - Teny Malagasy, Teny ibeazako, Teny ahombiazako
+thanks_for_signing_up: Misaotra anao nisoratra anarana
 about: "
 h2. Mombamomba
 
@@ -23,9 +37,26 @@ Izay angamba aloha no azo ambara, raha misy fanontaniana dia aza misalasala mano
 
 Mazotoa mandika teny e !
     "
+description: Fanazavana
+value: Valera
+create: Ampidirina
+update_success: Voaray soamantsara ny fiovana nangatahanao
+ui_lang: Fiteny hitanao eto amin'ny vohikala
+footer_info: taoteny VM dia namboarin'i jojopil ho an'ny tetikasa telomiova
+content: Votoaty
+new_definition: Fanazavana vaovao
+signing_up_failed: Nisy zavatra hafahafa, jereo azafady!
+logout_success: Tsy ato anaty vohikala intsony ianao.
+random_term: Omeo patiny !
+logged_in_as: Tafandroso tsara i 
+destroy_success: Voafafa tsara ilay mpampiasa
+login_failed: Nisy olana teo amin'ny fidirana.
+src_lang: Fiteny iaingana
+update: Hanova
+password: Teny miafina
 login: Solonanarana
-screen_name: Anarana aseho
+should_be_different: Tokony ho samy hafa ny fiteny iaingana sy ny fiteny tanjona
+choose_interface_language_code: Fidio ny teny tianao ampiasaina eto anivon'ny vohikala
+change_password: Hanova teny miafina
 email: Imailaka
-password: Teny Miafina
-confirm_password: Fanantitranterana ny Teny Miafina
-sign_up: Hisoratra
+remember_me: Tadidio aho

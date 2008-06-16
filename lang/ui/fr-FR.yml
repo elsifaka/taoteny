@@ -1,0 +1,60 @@
+locale_name: Français
+continue: Continuer
+new: Nouveau
+sign_up: S'inscrire
+name: Nom
+back: Retour
+search: Rechercher
+tgt_lang: Langue cible
+part_of_speech: Type de mot
+new_entry: Nouvelle Entrée
+choose_source_language_code: Choisir la langue source
+languages_preferences: Préférences linguistique
+preferences: Préferences
+code_ISO_639_1: code ISO 639-1
+language: Langue
+login_success: Vous êtes maintenant connecté
+choose_target_language_code: Choisir la langue cible
+order: Ordre
+before_continuing: Avant de continuer
+confirm_password: Confirmation du mot de passe
+log_in: Se Connecter
+not_logged_in: Vous n'êtes pas connecté
+listing_languages: Liste des langues
+domain: Domaine
+signup_complete: Vous êtes maintenant inscrit
+advanced_search: Recherche avancée
+baseline: Taoteny - Teny Malagasy, Teny ibeazako, Teny ahombiazako
+thanks_for_signing_up: Nous vous remercions de vous être inscrit
+about: "
+h2. À Propos
+
+Taoteny VM est un mémoire de traduction participatif en ligne.
+
+Il a été créé pour centraliser tous les efforts de traductions de termes inexistants dans la langue malgache (sur ce site).
+
+Le moteur est sous licence artistique, et est disponible sur github.
+    "
+description: Description
+value: Valeur
+create: Créer
+update_success: Votre modification est enregistrée
+ui_lang: Langue de l'interface
+footer_info: Taoteny VM a été créé par jojopil pour le projet telomiova.
+content: Contenu
+new_definition: Nouvelle définition
+signing_up_failed: Echec de la connexion
+logout_success: Vous êtes maintenant déconnecté
+random_term: Un terme au hasard
+logged_in_as: Vous êtes connecté en tant que 
+destroy_success: Suppression effectué
+login_failed: Echec de la connexion
+src_lang: Langue source
+update: Modifier
+password: Mot de passe
+login: Identifiant
+should_be_different: La langue source et la langue cible doivent être différents
+choose_interface_language_code: Choisir la langue de l'interface
+change_password: Changer le mot de passe
+email: courriel
+remember_me: Se souvenir de moi
