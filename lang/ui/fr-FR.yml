@@ -56,5 +56,5 @@ login: Identifiant
 should_be_different: La langue source et la langue cible doivent être différents
 choose_interface_language_code: Choisir la langue de l'interface
 change_password: Changer le mot de passe
-email: courriel
+email: Courriel
 remember_me: Se souvenir de moi
