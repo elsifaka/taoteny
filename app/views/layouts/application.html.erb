@@ -25,6 +25,7 @@
       <div id="content">
         <% unless flash[:notice].blank? %><p class="flash notice"><%= flash[:notice] %></p><% end %>
         <% unless flash[:error].blank? %><p class="flash error"><%= flash[:error] %></p><% end %>
+<%= debug Locale.code %>
         <%= yield %>
       </div>
       <div id="footer">

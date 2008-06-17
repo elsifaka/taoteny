@@ -23,10 +23,12 @@
   <div id="search">
     <form>
       <div id="search_form">
+        <% form_tag entries_path, :method => :get do %>
         <%= render :partial => "languages/collection_select", :locals => {:object => :search_form, :usage => :search_term_language_code} %>
         <input type="text" name="search_term" id="search_term" size="50"/><br />
         <input type="submit" name="search_submit" id="search_submit" value="<%= :search.l %>" />
         <input type="submit" name="random_search_submit" id="random_search_submit" value="<%= :random_term.l %>" />
+        <% end %>
         <div id="search_actions" class="actions">
           <%= link_to :preferences.l, "#" %> |
           <%= link_to :advanced_search.l, "#" %>

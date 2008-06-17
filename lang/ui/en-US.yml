@@ -1,43 +1,62 @@
---- 
-continue: 
-new: New
-sign_up: sign up
-name: 
-back: Back
-search: 
-tgt_lang: Target Language
-part_of_speech: Part of speech
-new_entry: New Entry
-choose_source_language_code: 
-languages_preferences: Languages preferences
-preferences: Preferences
-code_ISO_639_1: 
-language: Language
-choose_target_language_code: 
-order: Order
-before_continuing: 
-confirm_password: Confirm Password
-log_in: log in
-not_logged_in: You are not logged in
-listing_languages: Listing languages
-domain: Domain
-advanced_search: 
-baseline: taoteny
-about: 
-description: Description
-value: Value
-create: Create
-ui_lang: User Interface Language
-footer_info: 
-content: Content
-new_definition: New Definition
-random_term: 
-logged_in_as: You are logged in as
-src_lang: Source Language
-update: Update
-password: Password
-login: Login
-choose_interface_language_code: 
-change_password: Change password
-email: Email
-remember_me: Remember me
+locale_name: Malagasy
+continue: Andao ary
+new: Vaovao
+sign_up: Hisoratra anarana
+name: Anarana
+back: Hiverina
+search: Hikaroka
+tgt_lang: Fiteny tanjona
+part_of_speech: Karazanteny
+new_entry: Voambolana vaovao
+choose_source_language_code: Fidio ny famantarana ny fiteny
+languages_preferences: Safidy momba ny fiteny
+preferences: Safidy
+code_ISO_639_1: famantarana ISO 639-1
+language: Fiteny
+login_success: Tafandroso soa aman-tsara ianao
+choose_target_language_code: Fidio ny fiteny tanjona
+order: Filaharana
+before_continuing: Alohan'ny hirosoana amin'ny lalindalina
+confirm_password: Antitrantero ny teny miafina
+log_in: Handroso
+not_logged_in: Mbola any ivelany ianao
+listing_languages: Lisitry ny fiteny
+domain: Sokajim-pahalalana
+signup_complete: Tafasoratra anarana soamantsara ianao
+advanced_search: Fikarohana amin'ny antsipirihany
+baseline: Taoteny - Teny Malagasy, Teny ibeazako, Teny ahombiazako
+thanks_for_signing_up: Misaotra anao nisoratra anarana
+about: "
+h2. Mombamomba
+
+VM dia vohikala natao itoeran'ny dikan-teny vaovao rehetra. Araka ny fombafomba web 2.0 dia afaka mandray anjara daholo ny olona rehetra, manome sosokevitra, mifidy izay vaombolana vaovao metimety amin'ny filàny.
+
+Ny faniriana moa dia ny hampiasan'ny olona rehetra ity fitaovana ity ka tsy handaniana fotoana hamoronana voambolana vahiny efa nisy nanandrana nandika.
+
+Izay angamba aloha no azo ambara, raha misy fanontaniana dia aza misalasala manoratra.
+
+Mazotoa mandika teny e !
+    "
+description: Fanazavana
+value: Valera
+create: Ampidirina
+update_success: Voaray soamantsara ny fiovana nangatahanao
+ui_lang: Fiteny hitanao eto amin'ny vohikala
+footer_info: taoteny VM dia namboarin'i jojopil ho an'ny tetikasa telomiova
+content: Votoaty
+new_definition: Fanazavana vaovao
+signing_up_failed: Nisy zavatra hafahafa, jereo azafady!
+logout_success: Tsy ato anaty vohikala intsony ianao.
+random_term: Omeo patiny !
+logged_in_as: Tafandroso tsara i 
+destroy_success: Voafafa tsara ilay mpampiasa
+login_failed: Nisy olana teo amin'ny fidirana.
+src_lang: Fiteny iaingana
+update: Hanova
+password: Teny miafina
+login: Solonanarana
+should_be_different: Tokony ho samy hafa ny fiteny iaingana sy ny fiteny tanjona
+choose_interface_language_code: Fidio ny teny tianao ampiasaina eto anivon'ny vohikala
+change_password: Hanova teny miafina
+email: Imailaka
+remember_me: Tadidio aho

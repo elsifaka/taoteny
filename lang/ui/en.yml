@@ -1,31 +1,62 @@
-locale_name: English
-baseline: "Yet Another Online Democratic Translation Memory"
-footer_info: <a href="/welcome/about" title="Yet Another Online Democratic Translation Memory">VM</a> was dropped on <a href="http://rubyonrails.com" title="Web Development that doesn\'t hurt">Rails</a> for the <a href="http://telomiova.org" title="Internet - Malagasy - Mivelatra">Telomiova Project</a> by <a href="http://jojopil.com" title="Innovations">Jojopil</a>.
-welcome: "Welcome on VM"
-before_continuing: "Before continuing"
-choose_interface_language_code: "Choose your interface language : "
-choose_source_language_code: "Choose your source language : "
-choose_target_language_code: "Choose your target language : "
-continue: "Let's go !"
-search: "Search"
-random_term: "Random term"
-preferences: "Preferences"
-advanced_search: "Advanced Search"
+locale_name: Malagasy
+continue: Andao ary
+new: Vaovao
+sign_up: Hisoratra anarana
+name: Anarana
+back: Hiverina
+search: Hikaroka
+tgt_lang: Fiteny tanjona
+part_of_speech: Karazanteny
+new_entry: Voambolana vaovao
+choose_source_language_code: Fidio ny famantarana ny fiteny
+languages_preferences: Safidy momba ny fiteny
+preferences: Safidy
+code_ISO_639_1: famantarana ISO 639-1
+language: Fiteny
+login_success: Tafandroso soa aman-tsara ianao
+choose_target_language_code: Fidio ny fiteny tanjona
+order: Filaharana
+before_continuing: Alohan'ny hirosoana amin'ny lalindalina
+confirm_password: Antitrantero ny teny miafina
+log_in: Handroso
+not_logged_in: Mbola any ivelany ianao
+listing_languages: Lisitry ny fiteny
+domain: Sokajim-pahalalana
+signup_complete: Tafasoratra anarana soamantsara ianao
+advanced_search: Fikarohana amin'ny antsipirihany
+baseline: Taoteny - Teny Malagasy, Teny ibeazako, Teny ahombiazako
+thanks_for_signing_up: Misaotra anao nisoratra anarana
 about: "
-h2. About
+h2. Mombamomba
 
-VM is a _translation memory_. Cet outil a été créé pour centraliser tous les essais de traductions de termes inexistants dans la langue malgache.
+VM dia vohikala natao itoeran'ny dikan-teny vaovao rehetra. Araka ny fombafomba web 2.0 dia afaka mandray anjara daholo ny olona rehetra, manome sosokevitra, mifidy izay vaombolana vaovao metimety amin'ny filàny.
 
-Nous espérons que grâce à cet outil, toutes les personnes travaillant dans les domaines où le vocabulaire spécialisé manque, pourront dorénavant partager leurs essais de traductions et pourront profiter des recherches faites par d'autres personnes.
+Ny faniriana moa dia ny hampiasan'ny olona rehetra ity fitaovana ity ka tsy handaniana fotoana hamoronana voambolana vahiny efa nisy nanandrana nandika.
 
-Bon Surf !
+Izay angamba aloha no azo ambara, raha misy fanontaniana dia aza misalasala manoratra.
+
+Mazotoa mandika teny e !
     "
-login: Login
-email: Email
-password: Password
-confirm_password: Confirm Password
-sign_up: Sign Up
-log_in: Log in
-log_out: Log out
-logged_in_as: You are logged in as
-not_logged_in: You are not logged in
+description: Fanazavana
+value: Valera
+create: Ampidirina
+update_success: Voaray soamantsara ny fiovana nangatahanao
+ui_lang: Fiteny hitanao eto amin'ny vohikala
+footer_info: taoteny VM dia namboarin'i jojopil ho an'ny tetikasa telomiova
+content: Votoaty
+new_definition: Fanazavana vaovao
+signing_up_failed: Nisy zavatra hafahafa, jereo azafady!
+logout_success: Tsy ato anaty vohikala intsony ianao.
+random_term: Omeo patiny !
+logged_in_as: Tafandroso tsara i 
+destroy_success: Voafafa tsara ilay mpampiasa
+login_failed: Nisy olana teo amin'ny fidirana.
+src_lang: Fiteny iaingana
+update: Hanova
+password: Teny miafina
+login: Solonanarana
+should_be_different: Tokony ho samy hafa ny fiteny iaingana sy ny fiteny tanjona
+choose_interface_language_code: Fidio ny teny tianao ampiasaina eto anivon'ny vohikala
+change_password: Hanova teny miafina
+email: Imailaka
+remember_me: Tadidio aho
