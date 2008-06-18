@@ -6,5 +6,5 @@ nbproject/**/*
 log/*.log
 tmp/**/*
 database.yml
-Capify
+Capfile
 deploy.rb
