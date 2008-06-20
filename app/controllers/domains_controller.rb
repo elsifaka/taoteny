@@ -26,10 +26,6 @@ class DomainsController < ApplicationController
   def new
     @languages = Language.find(:all, :select => "name, id")
     @domain = Domain.new
-    
-    @languages.each do |l|
-      @domain.domain_metas.build :language => l
-    end
 
     respond_to do |format|
       format.html # new.html.erb
