@@ -1,21 +1,31 @@
-<h1><%= :new_domain.l("Nouveau Domaine") %></h1>
+<h1>Nouveau Domaine</h1>
 <%= error_messages_for :domain %>
 <% form_for(@domain) do |f| %>
   <p>
-    <b><%= :language.l("Language") %></b><br />
-    <%= language_select :domain, :language %>
+    <%= f.label :parent_id, "Parent" %>
+    <br/>
+    <%= f.collection_select :parent_id, Domain.find(:all), :id, :name_fre %>
   </p>
+  <% @domain.domain_metas.each do |m| %>
+    <% fields_for "domain[domain_metas_attributes][]", m do |m_fields| %>
+      <fieldset>
+        <legend><%= m.language.public_name %></legend>
+        <p>
+          <%= m_fields.label :name, "Nom" %>
+          <br/>
+          <%= m_fields.text_field :name %>
+        </p>
+        <p>
+          <%= m_fields.label :description, "Description" %>
+          <br/>
+          <%= m_fields.text_field :description %>
+        </p>
+        <%= m_fields.hidden_field :language_id, :value => m.language[:id] %>
+      </fieldset>
+    <% end %>
+  <% end %>
   <p>
-    <%= f.label :name, :name.l %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :description, :description.l %><br />
-    <%= f.text_field :description %>
-  </p>
-  <p>
-    <%= f.submit :create.l("Create") %>
+    <%= f.submit "Create" %>
   </p>
 <% end %>
-<%= link_to :back.l("Back"), domains_path %>
-
+<%= link_to 'Back', domains_path %>
