@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080613195728) do
+ActiveRecord::Schema.define(:version => 20080620114134) do
 
   create_table "attributions", :force => true do |t|
     t.integer  "part_of_speech_id", :limit => 11
@@ -30,11 +30,16 @@ ActiveRecord::Schema.define(:version => 20080613195728) do
     t.datetime "updated_at"
   end
 
-  create_table "domains", :force => true do |t|
-    t.string   "concept_hash"
+  create_table "domain_metas", :force => true do |t|
+    t.integer  "domain_id",   :limit => 11
     t.string   "name"
     t.string   "description"
-    t.integer  "language_id",  :limit => 11
+    t.integer  "language_id", :limit => 11
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "domains", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

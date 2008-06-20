@@ -1,0 +1,17 @@
+<% div_for domain do %>
+<div class="side">
+  <div class="id">#<%= domain[:id] %></div>
+  <div class="actions">
+    <%= link_to 'Edit', edit_domain_path(domain) %><br /><%= link_to 'Destroy', domain, :confirm => 'Are you sure?', :method => :delete %>
+  </div>
+</div>
+<div class="main">
+  <div class="entry">
+    <%= link_to(domain.name_fr, domain) %>
+  </div>
+  <div class="description">
+    <%= domain.description_fr %>
+  </div>
+</div>
+<br class="clear" />
+<% end %>
