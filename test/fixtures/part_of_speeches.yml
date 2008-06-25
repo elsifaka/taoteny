@@ -35,11 +35,11 @@ interjection:
   value: int.
   description: interjection
 nom:
-  language: français
+  language: french
   value: n.
   description: nom
 pronom:
-  language: english
+  language: french
   value: pro.
   description: pronom
 adjectif:

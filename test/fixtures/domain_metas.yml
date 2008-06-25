@@ -1,0 +1,15 @@
+en_gen:
+  domain: gen
+  name: General
+  description: General domains
+  language: english
+fr_gen:
+  domain: gen
+  name: Général
+  description: Domaine général
+  language: french
+mg_gen:
+  domain: gen
+  name: Ankapobe
+  description: Sokajim-pahalalana ankapobe
+  language: malagasy
