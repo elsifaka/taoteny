@@ -18,19 +18,9 @@ ActiveRecord::Schema.define(:version => 20080625124454) do
     t.integer  "order",             :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "domain",            :limit => 11
+    t.integer  "domain_id",         :limit => 11
     t.text     "definition"
     t.string   "source_url"
-  end
-
-  create_table "definitions", :force => true do |t|
-    t.string   "concept_hash"
-    t.integer  "language_id",  :limit => 11
-    t.integer  "domain_id",    :limit => 11
-    t.text     "content"
-    t.integer  "order",        :limit => 11
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "domain_metas", :force => true do |t|
