@@ -4,8 +4,8 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :language, :language.l("Language") %><br />
-    <%= f.text_field :language %>
+    <%= f.label :language_id, :language.l("Language") %><br />
+    <%= language_select :part_of_speech, :language_id %>
   </p>
   <p>
     <%= f.label :value, :value.l("Value") %><br />

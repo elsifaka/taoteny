@@ -1,7 +1,8 @@
-locale_name: Malagasy
+--- 
 continue: Andao ary
 new: Vaovao
 sign_up: Hisoratra anarana
+are_you_sure: izany tokoa?
 name: Anarana
 back: Hiverina
 search: Hikaroka
@@ -15,40 +16,38 @@ code_ISO_639_1: famantarana ISO 639-1
 language: Fiteny
 login_success: Tafandroso soa aman-tsara ianao
 choose_target_language_code: Fidio ny fiteny tanjona
+edit: Hanova
 order: Filaharana
 before_continuing: Alohan'ny hirosoana amin'ny lalindalina
 confirm_password: Antitrantero ny teny miafina
 log_in: Handroso
 not_logged_in: Mbola any ivelany ianao
 listing_languages: Lisitry ny fiteny
+destroy: Hamono
 domain: Sokajim-pahalalana
 signup_complete: Tafasoratra anarana soamantsara ianao
 advanced_search: Fikarohana amin'ny antsipirihany
 baseline: Taoteny - Teny Malagasy, Teny ibeazako, Teny ahombiazako
 thanks_for_signing_up: Misaotra anao nisoratra anarana
-about: "
-h2. Mombamomba
-
-VM dia vohikala natao itoeran'ny dikan-teny vaovao rehetra. Araka ny fombafomba web 2.0 dia afaka mandray anjara daholo ny olona rehetra, manome sosokevitra, mifidy izay vaombolana vaovao metimety amin'ny filàny.
-
-Ny faniriana moa dia ny hampiasan'ny olona rehetra ity fitaovana ity ka tsy handaniana fotoana hamoronana voambolana vahiny efa nisy nanandrana nandika.
-
-Izay angamba aloha no azo ambara, raha misy fanontaniana dia aza misalasala manoratra.
-
-Mazotoa mandika teny e !
-    "
-description: Fanazavana
+about: " h2. Mombamomba\n\
+  VM dia vohikala natao itoeran'ny dikan-teny vaovao rehetra. Araka ny fombafomba web 2.0 dia afaka mandray anjara daholo ny olona rehetra, manome sosokevitra, mifidy izay vaombolana vaovao metimety amin'ny fil\xC3\xA0ny.\n\
+  Ny faniriana moa dia ny hampiasan'ny olona rehetra ity fitaovana ity ka tsy handaniana fotoana hamoronana voambolana vahiny efa nisy nanandrana nandika.\n\
+  Izay angamba aloha no azo ambara, raha misy fanontaniana dia aza misalasala manoratra.\n\
+  Mazotoa mandika teny e ! "
 value: Valera
+description: Fanazavana
 create: Ampidirina
 update_success: Voaray soamantsara ny fiovana nangatahanao
 ui_lang: Fiteny hitanao eto amin'ny vohikala
 footer_info: taoteny VM dia namboarin'i jojopil ho an'ny tetikasa telomiova
+show: Asehoy
+new_domain: Sokajim-pahalalana vaovao
 content: Votoaty
 new_definition: Fanazavana vaovao
 signing_up_failed: Nisy zavatra hafahafa, jereo azafady!
 logout_success: Tsy ato anaty vohikala intsony ianao.
 random_term: Omeo patiny !
-logged_in_as: Tafandroso tsara i 
+logged_in_as: Tafandroso tsara i
 destroy_success: Voafafa tsara ilay mpampiasa
 login_failed: Nisy olana teo amin'ny fidirana.
 src_lang: Fiteny iaingana

@@ -1,22 +1,15 @@
-<h1>Listing entries</h1>
-
-<table>
-  <tr>
-    <th>Language</th>
-    <th>Value</th>
-  </tr>
-
 <% for entry in @entries %>
-  <tr>
-    <td><%=h entry.language %></td>
-    <td><%=h entry.value %></td>
-    <td><%= link_to 'Show', entry %></td>
-    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-    <td><%= link_to 'Destroy', entry, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div class="actions side">
+    <%= link_to :edit.l("edit"), edit_entry_path(entry) %><br />
+    <%= link_to :destroy.l("destroy"), entry, :confirm => :are_you_sure.l("Are you sure?"), :method => :delete %><br />
+  </div>
+  <div class="content">
+    [<%=link_to(h(entry.language.code_ISO_639_1), entry.language) %>]
+    <%=link_to(h(entry.value), entry) %>
+  </div>
 <% end %>
-</table>
 
 <br />
-
-<%= link_to 'New entry', new_entry_path %>
+<div class="actions">
+  <%= link_to 'New entry', new_entry_path %>
+</div>

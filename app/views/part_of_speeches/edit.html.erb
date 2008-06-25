@@ -1,24 +1,24 @@
-<h1>Editing part_of_speech</h1>
+<h1><%= :editing_part_of_speech.l("Editing part_of_speech") %></h1>
 
 <% form_for(@part_of_speech) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :language %><br />
-    <%= f.text_field :language %>
+    <%= f.label :language_id, :language.l %><br />
+    <%= language_select :part_of_speech, :language_id %>
   </p>
   <p>
-    <%= f.label :value %><br />
+    <%= f.label :value, :value.l %><br />
     <%= f.text_field :value %>
   </p>
   <p>
-    <%= f.label :description %><br />
+    <%= f.label :description, :value.l %><br />
     <%= f.text_field :description %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit :update.l("Update") %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @part_of_speech %> |
-<%= link_to 'Back', part_of_speeches_path %>
+<%= link_to :show.l('Show'), @part_of_speech %> |
+<%= link_to :back.l('Back'), part_of_speeches_path %>

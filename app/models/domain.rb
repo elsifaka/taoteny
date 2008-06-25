@@ -17,6 +17,7 @@ class Domain < ActiveRecord::Base
   end
 
   def meta_value(key, code)
+    # if the key is not translated, return the first meta_value
     my_meta = domain_metas.detect(domain_metas[0]) {|my_m| my_m.language.code_ISO_639_1 == code}
     my_meta.send key
   end

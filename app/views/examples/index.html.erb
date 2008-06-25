@@ -1,0 +1,24 @@
+<h1>Listing examples</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Attribution</th>
+    <th>Language</th>
+  </tr>
+
+<% for example in @examples %>
+  <tr>
+    <td><%=h example.content %></td>
+    <td><%=h example.attribution %></td>
+    <td><%=h example.language %></td>
+    <td><%= link_to 'Show', example %></td>
+    <td><%= link_to 'Edit', edit_example_path(example) %></td>
+    <td><%= link_to 'Destroy', example, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New example', new_example_path %>

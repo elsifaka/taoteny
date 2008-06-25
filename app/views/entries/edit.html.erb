@@ -1,11 +1,11 @@
-<h1>Editing entry</h1>
+<h1><%= :editing_entry.l("Editing entry") %></h1>
 
 <%= error_messages_for :entry %>
 
 <% form_for(@entry) do |f| %>
   <p>
     <b><%= :language.l("Language") %></b><br />
-    <%= language_select :entry, :language %>
+    <%= language_select :entry, :language_id %>
   </p>
 
   <p>
@@ -14,9 +14,10 @@
   </p>
 
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit :update.l("Update") %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @entry %> |
-<%= link_to 'Back', entries_path %>
+<div class="actions">
+<%= link_to :show.l('Show'), @entry %> |
+<%= link_to :back.l("back"), entries_path %>
+</div>

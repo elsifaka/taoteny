@@ -1,0 +1,32 @@
+<% form_for(@attribution) do |f| %>
+  <%= debug @entry %>
+  <%= f.error_messages %>
+  <p>
+    <%= render :partial => @entry %>
+  </p>
+  <p>
+    <%= f.label :order, :order.l("Order") %>:
+    <%= f.text_field :order %>
+  </p>
+  <p>
+    <%= f.label :part_of_speech_id, :part_of_speech.l %>
+    <%= f.collection_select :part_of_speech_id, PartOfSpeech.find(:all, :conditions => ["language_id = ?", @entry.language]), :id, :description %>
+  </p>
+  <p>
+    <%= f.label :domain_id, :domain.l %>
+    <%= f.collection_select :domain_id, Domain.find(:all), :id, ("name_" + Locale.code.to_s[0..1]).to_sym %>   
+  </p>
+  <p>
+    <%= f.label :definition, :definition.l("Definition") %>:
+    <%= f.text_field :definition %>
+  </p>
+  <p>
+    <%= f.label :example, :example.l("Exemple") %>:
+    <%= f.text_field :example %>
+  </p>
+  <p>
+    <%= f.submit :create.l("Create") %>
+  </p>
+<% end %>
+
+<%= link_to :back.l('Back'), attributions_path %>

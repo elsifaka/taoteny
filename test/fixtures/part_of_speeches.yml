@@ -1,11 +1,80 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  language: 
-  value: MyString
-  description: MyString
-
-two:
-  language: 
-  value: MyString
-  description: MyString
+noun:
+  language: english
+  value: n.
+  description: noun
+pronoun:
+  language: english
+  value: pro.
+  description: pronoun
+adjective:
+  language: english
+  value: adj.
+  description: adjective
+determiner:
+  language: english
+  value: det.
+  description: determiner
+verb:
+  language: english
+  value: v.
+  description: verb.
+adverb:
+  language: english
+  value: adv.
+  description: adverb
+preposition:
+  language: english
+  value: prep.
+  description: preposition
+conjunction:
+  language: english
+  value: conj.
+  description: conjunction
+interjection:
+  language: english
+  value: int.
+  description: interjection
+nom:
+  language: français
+  value: n.
+  description: nom
+pronom:
+  language: english
+  value: pro.
+  description: pronom
+adjectif:
+  language: french
+  value: adj.
+  description: adjectif
+verbe:
+  language: french
+  value: v.
+  description: verbe
+adverbe:
+  language: french
+  value: adv.
+  description: adverbe
+preposition_f:
+  language: french
+  value: prép.
+  description: préposition
+conjonction:
+  language: french
+  value: conj.
+  description: conjonction
+interjection_f:
+  language: french
+  value: int.
+  description: interjection
+anarana:
+  language: malagasy
+  value: a.
+  description: anarana
+mpamaritra:
+  language: malagasy
+  value: mpt.
+  description: mpamari-toetra
+matoanteny:
+  language: malagasy
+  value: mt.
+  description: matoanteny

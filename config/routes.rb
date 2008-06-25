@@ -1,7 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :part_of_speeches
 
-  map.resources :definitions
+  map.resources :examples
+
+  map.resources :part_of_speeches
 
   map.resources :users
 
@@ -11,7 +12,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :languages
 
-  map.resources :entries
+  map.resources :entries do |e|
+      e.resources :attributions, :name_prefix => nil
+  end
 
   map.root :controller => "Welcome", :action => "about"
 

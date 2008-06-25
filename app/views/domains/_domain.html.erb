@@ -7,10 +7,10 @@
 </div>
 <div class="main">
   <div class="entry">
-    <%= link_to(domain.name_fr, domain) %>
+    <%= link_to(domain.meta_value("name", Locale.code.to_s[0..1]), domain) %>
   </div>
   <div class="description">
-    <%= domain.description_fr %>
+    <%= domain.meta_value("description", Locale.code.to_s[0..1]) %>
   </div>
 </div>
 <br class="clear" />

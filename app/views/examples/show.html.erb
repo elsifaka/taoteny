@@ -1,0 +1,18 @@
+<p>
+  <b>Content:</b>
+  <%=h @example.content %>
+</p>
+
+<p>
+  <b>Attribution:</b>
+  <%=h @example.attribution %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%=h @example.language %>
+</p>
+
+
+<%= link_to 'Edit', edit_example_path(@example) %> |
+<%= link_to 'Back', examples_path %>

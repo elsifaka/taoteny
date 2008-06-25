@@ -1,0 +1,12 @@
+<h1>Editing attribution</h1>
+
+<% form_for(@attribution) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @attribution %> |
+<%= link_to 'Back', attributions_path %>

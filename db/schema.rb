@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080620114134) do
+ActiveRecord::Schema.define(:version => 20080625124454) do
 
   create_table "attributions", :force => true do |t|
     t.integer  "part_of_speech_id", :limit => 11
@@ -18,6 +18,9 @@ ActiveRecord::Schema.define(:version => 20080620114134) do
     t.integer  "order",             :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "domain",            :limit => 11
+    t.text     "definition"
+    t.string   "source_url"
   end
 
   create_table "definitions", :force => true do |t|
@@ -47,6 +50,13 @@ ActiveRecord::Schema.define(:version => 20080620114134) do
   create_table "entries", :force => true do |t|
     t.integer  "language_id", :limit => 11
     t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "examples", :force => true do |t|
+    t.string   "content"
+    t.integer  "attribution_id", :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,13 @@
+<% div_for attribution do %>
+  <div class="side actions">
+    <%= link_to :edit.l('Edit'), edit_attribution_path(attribution) %><br />
+    <%= link_to :destroy.l('Destroy'), attribution, :confirm => 'Are you sure?', :method => :delete %><br />
+  </div>
+  <div class="content">
+    <span class="part_of_speech"><%= attribution.part_of_speech.value %></span>
+    <span class="definition"><%= attribution.definition.content %></span>
+    <div class="examples">
+      <%= render :partial => attribution.examples %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<% div_for entry do %>
+  <div class="actions side">
+    <%= link_to :edit.l, edit_entry_path(entry) %><br />
+    <%= link_to :destroy.l, entry, :confirm => :are_you_sure.l('Are you sure?'), :method => :delete %><br />
+    <%= link_to :define.l, "#" %>
+  </div>
+  <div class="content">
+    <span class="source_entry"><%=h @entry.value %></span>&nbsp;<span class="language_code">[<%= @entry.language.code_ISO_639_1 %>]</span>
+  </div>
+<% end %>
